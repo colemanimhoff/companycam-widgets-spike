@@ -6,7 +6,7 @@
   "author": "Coleman Imhoff <colemanimhoff@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development --config webpack.config.js",
     "build": "webpack --mode production"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
     "html-webpack-plugin": "^4.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "webpack": "^5.3.0",
+    "webpack": "4.44.2",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   }
