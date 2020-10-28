@@ -2,10 +2,16 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  devServer: {
+    publicPath: '/',
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000,
+  },
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
+    path: path.join(__dirname, 'dist'),
   },
   module: {
     rules: [
