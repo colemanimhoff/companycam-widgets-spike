@@ -3,4 +3,8 @@ import ReactDOM from "react-dom";
 
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const shadowRoot = document.getElementById("root").attachShadow({
+  mode: "open",
+});
+
+ReactDOM.render(<App />, shadowRoot);
