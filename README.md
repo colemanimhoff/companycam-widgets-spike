@@ -1,3 +1,9 @@
+# Install Dependancies
+
+```bash
+yarn
+```
+
 # Run the App
 
 ```bash
