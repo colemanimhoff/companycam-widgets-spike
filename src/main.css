@@ -1,0 +1,16 @@
+#react-root {
+  padding: 7px;
+  box-shadow: lightgray 0.75px 0.75px 0.75px 1.75px;
+}
+
+.red {
+  color: lightcoral;
+}
+
+.blue {
+  color: lightblue;
+}
+
+.green {
+  color: lightgreen;
+}

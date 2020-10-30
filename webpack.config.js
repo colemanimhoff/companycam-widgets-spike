@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   devtool: 'none',
@@ -17,17 +18,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: 'html-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['css-loader'],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader', 'source-map-loader'],
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
       },
     ],
   },
@@ -36,5 +37,6 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
       filename: 'index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
