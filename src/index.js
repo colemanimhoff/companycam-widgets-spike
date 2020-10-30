@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 /* eslint-disable import/extensions */
 import App from './components/App.jsx';
 
-import styleSheet from './main.css';
+import styleSheet from './main.scss';
 
 const shadowRoot = document.getElementById('root').attachShadow({
   mode: 'open',

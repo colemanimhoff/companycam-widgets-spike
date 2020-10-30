@@ -22,8 +22,18 @@ module.exports = {
         use: 'html-loader',
       },
       {
-        test: /\.css$/,
-        use: ['css-loader'],
+        test: /\.s[ac]ss$/i,
+        use: [
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: process.env.NODE_ENV !== 'production',
+            },
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
