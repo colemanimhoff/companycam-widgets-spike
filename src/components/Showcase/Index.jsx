@@ -8,7 +8,10 @@ import {
 } from './constants';
 import showcaseReducer from './reducer';
 
-const Index = ({ showcaseId = null }) => {
+const Index = ({ showcaseId }) => {
+  if (!showcaseId) {
+    throw new Error('Missing showcaseId');
+  }
   const [state, dispatch] = useReducer(showcaseReducer, initialState);
 
   useEffect(() => {
