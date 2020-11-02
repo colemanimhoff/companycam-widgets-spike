@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /* eslint-disable import/extensions */
-import App from './components/App.jsx';
+import Showcase from './components/Showcase/Index.jsx';
 
 import styleSheet from './main.scss';
 
-const shadowRoot = document.getElementById('root').attachShadow({
+const shadowHost = document.getElementById('root');
+const shadowRoot = shadowHost.attachShadow({
   mode: 'open',
 });
 
@@ -19,4 +20,7 @@ reactRoot.setAttribute('id', 'react-root');
 shadowRoot.appendChild(reactRoot);
 
 /* eslint-disable react/jsx-filename-extension */
-ReactDOM.render(<App />, reactRoot);
+ReactDOM.render(
+  <Showcase showcaseId={shadowHost.getAttribute('data-showcase-id')} />,
+  reactRoot,
+);
