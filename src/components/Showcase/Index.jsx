@@ -12,6 +12,7 @@ const Index = ({ showcaseId }) => {
   if (!showcaseId) {
     throw new Error('Missing showcaseId');
   }
+
   const [state, dispatch] = useReducer(showcaseReducer, initialState);
 
   useEffect(() => {
