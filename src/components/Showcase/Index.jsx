@@ -1,35 +1,15 @@
-import React, { useReducer, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import {
-  initialState,
-  SET_SHOWCASE_ID,
-  GET_SHOWCASE_PROJECTS,
-} from './constants';
-import showcaseReducer from './reducer';
 
 const Index = ({ showcaseId }) => {
   if (!showcaseId) {
     throw new Error('Missing showcaseId');
   }
 
-  const [state, dispatch] = useReducer(showcaseReducer, initialState);
-
-  useEffect(() => {
-    dispatch({
-      type: SET_SHOWCASE_ID,
-      showcaseId,
-    });
-    dispatch({
-      type: GET_SHOWCASE_PROJECTS,
-      showcaseId,
-    });
-  }, []);
-
   return (
-    <>
-      <pre>{JSON.stringify(state, undefined, 2)}</pre>
-    </>
+    <div>
+      <p>Hello from the showcase widget!</p>
+    </div>
   );
 };
 
