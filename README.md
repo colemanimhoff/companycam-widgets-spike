@@ -27,3 +27,17 @@ You can open the build HTML in your browswer with:
 ```bash
 open dist/index.html
 ```
+
+# Docker
+
+You can run the following command to build a Docker container
+
+```bash
+docker build -t companycam:widget .
+```
+
+You can use the following to run that build
+
+```bash
+docker run -it --rm -p 3000:3000 companycam:widget
+```

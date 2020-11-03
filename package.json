@@ -6,7 +6,7 @@
   "author": "Coleman Imhoff <colemanimhoff@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development --config webpack.config.js",
+    "start": "webpack serve --mode development --host=0.0.0.0 --config webpack.config.js",
     "build": "webpack --mode production"
   },
   "dependencies": {
